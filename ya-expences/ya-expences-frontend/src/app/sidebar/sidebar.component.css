@@ -1,0 +1,37 @@
+.sidebar {
+  text-align: center;
+  color: white;
+  background-color: rgb(61, 58, 58);
+  padding: 2% 0%;
+  position: fixed;
+  top: 0;
+  width: 99%;
+}
+.sidebar ul {
+  display: inline;
+}
+.sidebar li {
+  margin: 3%;
+  border: 1px solid rgba(228, 120, 120, 0.424);
+  display: inline;
+  padding: 1%;
+}
+
+.sidebar li:hover {
+  background-color: grey;
+}
+
+h1 {
+  font-size: large;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}

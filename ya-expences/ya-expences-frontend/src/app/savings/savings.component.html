@@ -1,0 +1,26 @@
+<div class="main">
+    <div class = "exp-table">
+        <table>
+            <tr>
+                <th>Month</th>
+                <th>Savings</th>
+                <th>Expenditure</th>                
+            </tr>
+            <tr *ngFor="let d of data">
+              
+                <td>
+                    {{monthAndYear(d.date)}}
+                </td>
+                <td>
+                    {{d.moneyLeft}}
+                </td>
+                <td>
+                    {{d.spentAmount}}
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div id="main" ></div>
+</div>

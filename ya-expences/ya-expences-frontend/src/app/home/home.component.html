@@ -1,0 +1,38 @@
+<div class = "main">
+    <h1>Expense Tracker</h1>
+        <h1 class = "inp" *ngIf="!clicked" (click)="clicked = !clicked">   SAVINGS: {{savings}} &#9998;</h1>
+        <input class = "inp" *ngIf="clicked" type="text" value = {{savings}} (focusout)="callUpdate()" [(ngModel)] = "savings"/>
+
+        <div class = "expences">
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Note</th>
+                    <th>Spent</th>                  
+                </tr>
+                <tr *ngFor="let d of data">
+                  
+                    <td>
+                      {{d.expence.slice(0,8)}}
+                    </td>
+                    <td>
+                      {{d.expence.slice(8)}}
+                    </td>
+                    <td>
+                      {{d.spent}}
+                    </td>
+                </tr>
+
+                  
+            </table>
+            
+        </div>
+        <h1 class = "inp">Total Spend This Month: {{totalExp}}</h1>
+
+        <div>
+          <label>Expence Info:</label>
+          <input class = "input1" type="text" [(ngModel)]="expenceName" placeholder="where">
+          <input class = "input1" type="text" [(ngModel)]="expence" placeholder="how much">
+          <button (click)="addExpence()">Add Expence</button>
+        </div>
+</div>

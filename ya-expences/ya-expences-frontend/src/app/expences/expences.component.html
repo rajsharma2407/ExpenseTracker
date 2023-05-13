@@ -1,0 +1,46 @@
+<div class="main">
+
+    <button class = "btn" (click)="toggleView()">
+        {{viewOption}}
+    </button>
+    <div>
+        <label for="date1">From:</label>
+        <input class = "input1" type="date" name="date1" [(ngModel)]="forDate1">
+        <label for="date2">To:</label>
+        <input class = "input1" type="date" name="date2" [(ngModel)]="forDate2">
+
+        <button (click)="changeDates()">get expences</button>
+    </div>
+    <div class = "exp-table" *ngIf="toggle">
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Note</th>
+                <th>Spent</th>                  
+            </tr>
+            <tr *ngFor="let d of data">
+              
+                <td>
+                    {{d.exdate.slice(0,10)}}
+                </td>
+                <td>
+                  {{d.expence.slice(0,8)}}
+                </td>
+                <td>
+                  {{d.expence.slice(8)}}
+                </td>
+                <td>
+                  {{d.spent}}
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <h1 class="money">total money Spent = <span>{{moneySpent}}</span></h1>
+
+
+
+    <div id="main"></div>
+    
+</div>
